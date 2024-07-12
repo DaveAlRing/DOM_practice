@@ -53,3 +53,24 @@ const btn2 = document.querySelector("#btn2");
 btn2.addEventListener("click", () => {
     alert("Hello World");
 });
+
+//button function call
+function alertFunction () {
+    alert("WOOOOOOO!");
+};
+const btn3 = document.querySelector("#btn3");
+btn3.addEventListener("click", function(e) {
+    alertFunction();
+    console.log(e.target);
+    e.target.style.background = "blue";
+});
+
+//node list
+const buttons = document.querySelectorAll("button");
+
+//forEach to add alert to every button in list
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        alert(button.id);
+    });
+});
